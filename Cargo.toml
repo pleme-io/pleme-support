@@ -1,0 +1,34 @@
+[package]
+name = "pleme-support"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Universal support ticket system for Pleme platform - tickets, SLA tracking, CSAT scores, analytics"
+repository = "https://github.com/pleme-io/pleme-support"
+homepage = "https://github.com/pleme-io/pleme-support"
+readme = "README.md"
+
+[dependencies]
+tokio = { version = "1.41", features = ["full"] }
+async-trait = "0.1"
+sqlx = { version = "0.8", default-features = false, features = ["chrono", "json", "macros", "migrate", "postgres", "runtime-tokio", "uuid"] }
+async-graphql = { version = "7.0.17", features = ["apollo_tracing", "chrono", "dataloader", "uuid"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.11", features = ["serde", "v4"] }
+rust_decimal = { version = "1.37", features = ["serde"] }
+thiserror = "2.0"
+anyhow = "1.0"
+tracing = "0.1"
+pleme-error = { git = "https://github.com/pleme-io/pleme-error", optional = true }
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[features]
+default = ["full"]
+full = []
+errors = ["pleme-error"]
+
+
