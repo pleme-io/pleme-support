@@ -7,6 +7,8 @@ description = "Universal support ticket system for Pleme platform - tickets, SLA
 repository = "https://github.com/pleme-io/pleme-support"
 homepage = "https://github.com/pleme-io/pleme-support"
 readme = "README.md"
+keywords = ["support", "tickets", "sla", "customer-service", "helpdesk"]
+categories = ["web-programming"]
 
 [dependencies]
 tokio = { version = "1.41", features = ["full"] }
