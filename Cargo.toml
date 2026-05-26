@@ -1,6 +1,6 @@
 [package]
 name = "pleme-support"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT"
 description = "Universal support ticket system for Pleme platform - tickets, SLA tracking, CSAT scores, analytics"
